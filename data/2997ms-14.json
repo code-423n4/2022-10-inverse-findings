@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "2997ms",
+  "risk": "3",
+  "title": "If borrowController is not set up and we will skip the check when borrowing",
+  "issueId": 14,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/14"
+}
