@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Prefix",
+  "risk": "3",
+  "title": "Borrowing of funds from market can disable taking profit by the Fed.sol and mess up internal logic",
+  "issueId": 8,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/8"
+}
