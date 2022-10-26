@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "rvierdiiev",
+  "risk": "3",
+  "title": "Oracle calculates decimals in incorrect way, the price for the token will be wrong",
+  "issueId": 52,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/52"
+}
