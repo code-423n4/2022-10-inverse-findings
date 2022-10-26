@@ -2,6 +2,8 @@
 In Solidity, it is required to always multiply before dividing to prevent rounding related issues to happen.
 
 ### Market.sol
+Here are the followed recommendations:
+
 `getWithdrawalLimitInternal` function - https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L360
 
     uint minimumCollateral = debt * 1 ether * 10000 / (oracle.getPrice(address(collateral), collateralFactorBps) * collateralFactorBps);
