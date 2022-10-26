@@ -14,3 +14,7 @@ The following functions should check for `address != 0` or `uint256` boundaries:
 - `changeSupplyCeiling`
 - `changeChair`
 
+# 3. `Fed.globalSupply` variable is redundant with `Fed.dola.totalSupply` since this is an ERC-20 token
+
+Recommendation: Remove `Fed.globalSupply` and use `Fed.dola.totalSupply()` instead.
+
