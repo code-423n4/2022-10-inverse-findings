@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "chaduke",
+  "risk": "3",
+  "title": "Function borrowAllowed() will allow any EOA to be allowed to borrow",
+  "issueId": 30,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/30"
+}
