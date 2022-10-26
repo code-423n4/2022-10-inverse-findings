@@ -73,5 +73,10 @@ cache block.timestamp
 cache feeds[token] as it will be accessed multiple times, caches dailylows[token] 
 
 13. 
+https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L390
+https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L422
+move the check of *require(!borrowPaused, "Borrowing is paused");" to earlier entry functions such as L290 and L422 to save gas
+
+
 
 
