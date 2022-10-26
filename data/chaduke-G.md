@@ -54,4 +54,24 @@ from non-zero to non-zero.
 6. https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L196
 Move line 196 inside unchecked{} since underflow is impossible due to previous check
 
+7 https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L284
+cache block.timestamp as it will be accessed multiple times in this function
+
+8. https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L328-L329
+Eliminte Line 328 as it is implied by line 329
+
+9. https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L70
+Cache pendingOperator as it will accessed twice
+
+10. https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L233-L235
+Define it as a precomputed constant
+
+11. https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L284-L292
+cache block.timestamp
+
+12. https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Oracle.sol#L112
+cache feeds[token] as it will be accessed multiple times, caches dailylows[token] 
+
+13. 
+
 
