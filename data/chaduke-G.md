@@ -9,6 +9,7 @@ Spliting a complex condition statement into multiple revert-with-custom-error st
 
 Similar suggetion to go line 195. 
 
+
 2) 
 https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L324
 IEscrow escrow = predictEscrow(user);
@@ -35,6 +36,22 @@ function borrowAllowed(address msgSender, address, uint) public view returns (bo
     }
 
 ```
- 
+ 4. Rearrange the storage variable locations for all files so that all variables
+   can be packed into 32-bytes slots. For example, Line 13 
+   in DBR.sol needs to move to the end.
+
+5. Reimplement
+mapping (address => bool) public minters;
+mapping (address => bool) public markets;
+as
+
+mapping (address => uint) public minters;
+mapping (address => uint) public markets;
+
+and encode 1 as false and 2 as true since changing 0 to 1 is more expensive then change
+from non-zero to non-zero.
+
+6. https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L196
+Move line 196 inside unchecked{} since underflow is impossible due to previous check
 
 
