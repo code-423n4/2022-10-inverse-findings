@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "xyzbtchunt",
+  "risk": "3",
+  "title": "Duplicate contract IERC20 interface with same name and unsafe usage ERC20,Transfer and Transferfrom",
+  "issueId": 75,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/75"
+}
