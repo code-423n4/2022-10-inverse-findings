@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "fatherOfBlocks",
+  "risk": "2",
+  "title": "Lack of validation in transfers, allowing inconsistencies in the states",
+  "issueId": 59,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/59"
+}
