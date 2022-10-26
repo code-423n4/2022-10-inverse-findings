@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "Oracle contract is using a deprecated API",
+  "issueId": 45,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/45"
+}
