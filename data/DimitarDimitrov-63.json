@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "DimitarDimitrov",
+  "risk": "3",
+  "title": "Usage of tx.origin",
+  "issueId": 63,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/63"
+}
