@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "KingNFT",
+  "risk": "2",
+  "title": "Calculation of liquidation fee has unnecessary loss of precision",
+  "issueId": 31,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/31"
+}
