@@ -60,6 +60,7 @@ https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L161
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L172
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L183
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L194
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L203
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L212
 
 ## Payable Access Control Functions Costs Less Gas
@@ -139,3 +140,45 @@ It is only more efficient when you can pack variables of uint8 into the same sto
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L220
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L422
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L486
+
+## `||` Costs Less Gas Than Its Equivalent `&&`
+Rule of thumb: `(x && y)` is `(!(!x || !y))`
+
+Even with the 10k Optimizer enabled: `||`, OR conditions cost less than their equivalent `&&`, AND conditions.
+
+As an example, the following code line may be rewritten as:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L249
+
+```
+            require(!(recoveredAddress == address(0) || recoveredAddress != owner), "INVALID_SIGNER");
+```
+## += and -= Costs More Gas
+`+=` generally costs 22 more gas than writing out the assigned equation explicitly. The amount of gas wasted can be quite sizable when repeatedly operated in a loop. As an example, the following line of code could be rewritten as:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L304
+
+```
+        debts[user] =  debts[user] + additionalDebt;
+```
+Similarly, the following code line should be refactored as:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L316
+
+```
+        debts[user] = debts[user] - repaidDebt;
+```
+## Avoid Emitting State Variable When an Equivalent Alternative is Available
+The following instance could have had `msg.sender` emitted instead of `operator` to save gas. In fact, `msg.sender' instead of `pendingOperator` should be assigned to `operator` to save more gas. Here are two of the instances entailed which may have the functions unanimously refactored as follows:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L74
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L66-L71
+
+```
+    function claimOperator() public {
+        require(msg.sender == pendingOperator, "ONLY PENDING OPERATOR");
+        operator = msg.sender;
+        pendingOperator = address(0);
+        emit ChangeOperator(msg.sender);
+    }
+```
