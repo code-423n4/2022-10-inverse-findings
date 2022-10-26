@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "leosathya",
+  "risk": "2",
+  "title": "Usage of deprecated ChainLink API in Oracle.sol",
+  "issueId": 68,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/68"
+}
