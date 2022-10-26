@@ -1,7 +1,7 @@
 # Cache Storage Variables in Memory Variable In Function
 When a storage variable from a contract is used at least 2 times in the same function, it is possible to reduce gas consumption by caching it into a memory variable. This way we avoid additional SLOAD.
 
-### Market.sol
+## Market.sol
 The function `getWithdrawalLimitInternal` calls the variable `collateralFactorBps` 3 times, so it can be cached : https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L353:L363
 
     function getWithdrawalLimitInternal(address user) internal returns (uint) {
@@ -31,7 +31,7 @@ The `liquidate` function calls the variable `liquidationFeeBps` 2 times when con
 # Tight Variable Packing
 In Solidity, we can pack multiple contract variables into the same 32 bytes slot in storage. With this pattern, we can greatly optimize gas consumption when storing or loading statically-sized variables.
 
-### Market.sol
+## Market.sol
 Firstly, I would recommend to change the order of the contract variables' declaration to be more clear and to be able to use this pattern, below is the recommendation:
 
     uint256 internal immutable INITIAL_CHAIN_ID;
@@ -107,7 +107,7 @@ The `IOracle` interface defined in the `Market` contract must be modified too in
     }
 
 
-### Oracle.sol
+## Oracle.sol
 As the second argument of the functions `getPrice` and `viewPrice` has changed in the interface from a `uint` to an `uint16`, we must also change this directly at the function declaration.
 
     function viewPrice(address token, uint16 collateralFactorBps) external view returns (uint)
