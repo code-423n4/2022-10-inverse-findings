@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "vv7",
+  "risk": "2",
+  "title": "onDeposit() is not protected",
+  "issueId": 136,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/136"
+}
