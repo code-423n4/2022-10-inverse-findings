@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "User can call takeProfit from Fed.sol even when the market is not active in DBR.sol or paused",
+  "issueId": 134,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/134"
+}
