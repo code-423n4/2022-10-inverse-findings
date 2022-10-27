@@ -239,3 +239,8 @@ G-3 Use multiple require() statments insted of require(expression && expression 
 ## Consider marking constants as private
 ### Lines
 - DBR.sol:13
+
+## compares to a boolean constant
+DolaBorrowingRights.mint(address,uint256) (src/DBR.sol#349-352) compares to a boolean constant:
+        -require(bool,string)(minters[msg.sender] == true || msg.sender == operator,ONLY MINTERS OR OPERATOR) (src/DBR.sol#350)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#boolean-equality
