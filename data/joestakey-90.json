@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "joestakey",
+  "risk": "2",
+  "title": "`getPrice` revert for tokens with more than `18` decimals, breaking the `Market` using these tokens as collateral",
+  "issueId": 90,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/90"
+}
