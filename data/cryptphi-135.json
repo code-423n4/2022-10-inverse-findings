@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "cryptphi",
+  "risk": "2",
+  "title": "Possible reverts in Market functions due to Price issues",
+  "issueId": 135,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/135"
+}
