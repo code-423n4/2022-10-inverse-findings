@@ -24,3 +24,25 @@ vs code
 ## Recommended Mitigation Steps
 
 In setFeed(), we can add a require statement.
+
+---
+## Impact
+The blackhole address could be fixed price.
+
+## Proof of Concept
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L61
+
+```solidity
+fixedPrices[token] = price; 
+```
+The token address could be any address.
+
+The only operator can call setFixedPrice().
+However, we can eliminate the possibility.
+
+## Tools Used
+vs code
+
+## Recommended Mitigation Steps
+
+In setFixedPrice(), we can add a require statement.
