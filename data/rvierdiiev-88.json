@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "SimpleERC20Escrow and GovTokenEscrow contracts do not have function onDeposit that can be called from Market contract",
+  "issueId": 88,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/88"
+}
