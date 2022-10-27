@@ -1,5 +1,5 @@
 
-0) Current design will create an escrow contract for each user-market pair, so if there are 1M users (if Inverse is very successful), then there might be up to 1M * K (K be the number of markets), not to mention future upgrade of the escrow contract. So, the deployment gas fee is high. 
+0) Current design will create an escrow contract for each user-market pair, so if there are 1M users (if Inverse is very successful), then there might be up to 1M * K (K be the number of markets), not to mention future upgrade of the escrow contract. So, the total deployment gas fee is high. 
 
 Consider the deployment of  only ONE escrow contract but can be used by multilple user-market pairs will save a lot of gas. 
 
