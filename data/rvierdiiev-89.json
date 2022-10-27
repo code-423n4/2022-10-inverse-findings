@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "rvierdiiev",
+  "risk": "2",
+  "title": "There is no guarantee that `Oracle.getPrice` will be called by someone.",
+  "issueId": 89,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/89"
+}
