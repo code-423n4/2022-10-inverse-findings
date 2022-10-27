@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "evmwanderer",
+  "risk": "2",
+  "title": "Liquidation price calculation leads to unfair price for borrower",
+  "issueId": 110,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/110"
+}
