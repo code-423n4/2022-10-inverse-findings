@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Holmgren",
+  "risk": "3",
+  "title": "Liquidating your own debt allows you to withdraw excess collateral and make your debt undercollateralized (for some values of the *Bps parameters)",
+  "issueId": 128,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/128"
+}
