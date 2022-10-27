@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "cccz",
+  "risk": "2",
+  "title": "Users cannot use the result of the getLiquidatableDebt function for liquidation",
+  "issueId": 117,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/117"
+}
