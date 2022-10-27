@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "joestakey",
+  "risk": "2",
+  "title": "Use of deprecated Chainlink API may result in `Market` functions breaking",
+  "issueId": 92,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/92"
+}
