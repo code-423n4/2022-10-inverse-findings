@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "Chainlink data price feed can be stale / oudated because the code does not check the updatedAt timestamp from chainlink feed, impacting borrowing, withdraw and liquidation severely ",
+  "issueId": 131,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/131"
+}
