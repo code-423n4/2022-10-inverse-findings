@@ -165,6 +165,11 @@ The comment said `_replenishmentIncentiveBps` must be set between 1 and 10000, b
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L169
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L173
 
+Similar inconsistency has also been found on the following instance pertaining to `_liquidationFactorBps`:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L158
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L162
+
 ## Immutable Boolean
 `callOnDepositCallback` is an immutable state boolean in `Market.sol` that will have its literal state or value determined at the constructor upon contract deployment. It does not make much sense implementing it in deposit() involving the following code lines:
 
