@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "BClabs",
+  "risk": "3",
+  "title": "Collateral token with over 18 decimals will create underflow",
+  "issueId": 109,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/109"
+}
