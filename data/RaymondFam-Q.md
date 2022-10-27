@@ -4,6 +4,8 @@ Zero address checks should be implemented at the constructor to avoid human erro
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L77-L83
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Fed.sol#L37-L40
 
+Better yet, incorporate complementary codehash checks just to make sure the address inputs are the matching ones if these have not been deemed an overkill from the developer team's perspective.
+
 ## `block.timestamp` Unreliable
 The use of `block.timestamp` as part of the time checks can be slightly altered by miners/validators to favor them in contracts that have logic strongly dependent on them.
 
@@ -146,4 +148,35 @@ Here is one of the instances entailed:
 
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/escrows/INVEscrow.sol#L35
 
-Here are some of the instances entailed:
+## Missing Zero Value Checks
+`_replenishmentIncentiveBps` at the constructor should include a zero value check to be consistent with its setter function:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L76
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L173
+
+That said, a similar check for `_liquidationIncentiveBps` should also be included unless there is a good reason for not doing so:
+ 
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L74
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L150
+
+## Comment and Code Mistmatch
+The comment said `_replenishmentIncentiveBps` must be set between 1 and 10000, but the require statement implemented a threshold check between 0 and 10000:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L169
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L173
+
+## Immutable Boolean
+`callOnDepositCallback` is an immutable state boolean in `Market.sol` that will have its literal state or value determined at the constructor upon contract deployment. It does not make much sense implementing it in deposit() involving the following code lines:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L281-L283
+
+```
+        if(callOnDepositCallback) {
+            escrow.onDeposit();
+        }
+```
+If it has been set to true, the if condition can be removed since it is going to always run `escrow.onDeposit()`.
+
+If it has been set to false, lines 281 - 283 can be removed since it is going to always skip `escrow.onDeposit()`.
+
+Based on the code logic, it would make better sense setting it to true considering the collateral amount has been transferred from msg.sender to the escrow on line 280.
