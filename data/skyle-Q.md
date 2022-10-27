@@ -50,4 +50,11 @@ Fed.sol the function changeGov and ChangeChair are missing events for admin func
 Fed.sol:48
 Fed.sol:66
 
- 
+## missing check for return values
+ Market.recall(uint256) (src/Market.sol#203-206) ignores return value by dola.transfer(msg.sender,amount) (src/Market.sol#205)
+Market.deposit(address,uint256) (src/Market.sol#278-285) ignores return value by collateral.transferFrom(msg.sender,address(escrow),amount) (src/Market.sol#280)
+Market.borrowInternal(address,address,uint256) (src/Market.sol#389-401) ignores return value by dola.transfer(to,amount) (src/Market.sol#399)
+Market.repay(address,uint256) (src/Market.sol#531-539) ignores return value by dola.transferFrom(msg.sender,address(this),amount) (src/Market.sol#537)
+Market.forceReplenish(address,uint256) (src/Market.sol#559-572) ignores return value by dola.transfer(msg.sender,replenisherReward) (src/Market.sol#570)
+Market.liquidate(address,uint256) (src/Market.sol#591-612) ignores return value by dola.transferFrom(msg.sender,address(this),repaidDebt) (src/Market.sol#602)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-transfer
