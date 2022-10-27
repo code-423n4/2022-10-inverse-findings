@@ -12,6 +12,7 @@
     - [**8. Avoid duplicate code**](#8-avoid-duplicate-code)
     - [**9. Gas saving using variable cache**](#9-gas-saving-using-variable-cache)
     - [**10. Avoid the call Market.predictEscrow**](#10-avoid-the-call-marketpredictescrow)
+    - [**11. Optimize DBR.accrueDueTokens**](#11-optimize-dbraccrueDueTokens)
 
 # Gas
 
@@ -498,3 +499,24 @@ It's recommended to use the stored value `escrows[user]`.
 - [Market.sol:354](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L354)
 - [Market.sol:371](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L371)
 - [Market.sol:603](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L603)
+
+## **11. Optimize `DBR.accrueDueTokens`**
+
+The method `DBR.accrueDueTokens` doesn't check that the call is made by a market, and it's public, it should be changed to internal or private to save gas, and move the `debt` variable to avoid waste gas when it's fresh.
+
+```diff
+    function accrueDueTokens(address user) internal {
+-       uint debt = debts[user];
+        if(lastUpdated[user] == block.timestamp) return;
++       uint debt = debts[user];
+        uint accrued = (block.timestamp - lastUpdated[user]) * debt / 365 days;
+        dueTokensAccrued[user] += accrued;
+        totalDueTokensAccrued += accrued;
+        lastUpdated[user] = block.timestamp;
+        emit Transfer(user, address(0), accrued);
+    }
+```
+
+**Affected source code:**
+
+- [DBR.sol:284](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L284)
