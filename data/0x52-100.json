@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0x52",
+  "risk": "3",
+  "title": "Oracle#getPrice will return incorrect price if both feed decimals and token decimals != 18",
+  "issueId": 100,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/100"
+}
