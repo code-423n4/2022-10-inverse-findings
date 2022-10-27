@@ -182,3 +182,21 @@ https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L66-L71
         emit ChangeOperator(msg.sender);
     }
 ```
+## Use of Named Returns for Local Variables Saves Gas
+You can have further advantages in term of gas cost by simply using named return values as temporary local variable. There are numerous instances entailed throughout all codebases:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L97
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L101
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L312
+
+As an example, the following code block can be refactored as:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L245
+```
+    function getEscrow(address user) internal returns (IEscrow) {
+        if(escrows[user] != IEscrow(address(0))) return escrows[user];
+        escrow = createEscrow(user);
+        escrow.initialize(collateral, user);
+        escrows[user] = escrow;
+    }
+```
