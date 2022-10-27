@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "s3cunda",
+  "risk": "2",
+  "title": "INVEscrow.onDeposit function has no limitation of the caller, which will lead to token's delegatee receives less delegated token.",
+  "issueId": 101,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/101"
+}
