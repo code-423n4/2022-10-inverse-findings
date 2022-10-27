@@ -93,3 +93,22 @@ Issue Information: [G007](https://github.com/byterocket/c4-common-issues/blob/ma
 ```
 #### Tools used
 Manual
+
+
+
+
+### Improper liquidationFactorBps was set
+
+### Impact:
+It leads to an increase in the Gas value when <= 10000 is used in https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L162
+
+### Remidation
+
+It is fixed by using < 10000 which lowers the Gas fee
+
+### Findings
+https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L162
+
+
+### Tools:
+Manual
