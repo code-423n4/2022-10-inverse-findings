@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "cccz",
+  "risk": "2",
+  "title": "In the liquidate function, if escrow.balance() < liquidationFee, no collateral is sent to the gov",
+  "issueId": 115,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/115"
+}
