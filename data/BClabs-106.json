@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "BClabs",
+  "risk": "2",
+  "title": "SimpleERC20Escrow and GovTokenEscrow don't implement onDeposit.",
+  "issueId": 106,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/106"
+}
