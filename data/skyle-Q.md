@@ -44,4 +44,10 @@ Fed.sol:89 require(market.borrowPaused() != true, "CANNOT EXPAND PAUSED MARKETS"
 ###lines
 INVEscrow.sol:35
 
+## missing event for admin function like changing gov and chair
+Fed.sol the function changeGov and ChangeChair are missing events for admin functionality. Uses can't monitor changes done to the contract 
+###lines
+Fed.sol:48
+Fed.sol:66
+
  
