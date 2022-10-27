@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0xRobocop",
+  "risk": "3",
+  "title": "Using tokens with less than 18 precision decimals on the Oracle.sol contract will return an incorrect (higher) price ",
+  "issueId": 84,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/84"
+}
