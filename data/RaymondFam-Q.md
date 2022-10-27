@@ -154,7 +154,7 @@ https://github.com/code-423n4/2022-10-inverse/blob/main/src/escrows/INVEscrow.so
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L76
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L173
 
-That said, a similar check for `_liquidationIncentiveBps` should also be included unless there is a good reason for not doing so:
+That said, a zero value check for `_collateralFactorBps` should also be included unless there is a good reason for not doing so:
  
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L74
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L150
@@ -185,3 +185,25 @@ If it has been set to true, the if condition can be removed since it is going to
 If it has been set to false, lines 281 - 283 can be removed since it is going to always skip `escrow.onDeposit()`.
 
 Based on the code logic, it would make better sense setting it to true considering the collateral amount has been transferred from msg.sender to the escrow on line 280.
+
+## State Variable Associated With a Setter Function
+`liquidationFeeBps` in `Market.sol` should be assigned its needed value at the constructor like its other counterparts unless it has been pre-assigned a non-zero value.
+
+Had this been done, the following if statement could have been removed:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L605
+
+considering it would have been set between 0 and 10000 as documented in the comment:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L191
+ 
+Another good reason for setting its value upon deployment is to avoid the following problem:
+
+1. `liquidationIncentiveBps` has been set to 9999,
+2. `setLiquidationFeeBps()` is going to revert for any value greater than 0.
+
+## Lines Too Long
+Lines in source code are typically limited to 80 characters, but it’s reasonable to stretch beyond this limit when need be as monitor screens theses days are comparatively larger. Considering the files will most likely reside in GitHub that will have a scroll bar automatically kick in when the length is over 164 characters, all code lines and comments should be split when/before hitting this length. Keep line width to max 120 characters for better readability where possible. Here are some of the instances entailed:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L12-L14
+
