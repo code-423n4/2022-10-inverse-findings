@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Lambda",
+  "risk": "2",
+  "title": "Rounding in DBR.accrueDueTokens leading to inflated DBR balance",
+  "issueId": 202,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/202"
+}
