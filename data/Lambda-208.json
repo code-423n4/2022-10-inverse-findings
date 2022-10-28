@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Lambda",
+  "risk": "3",
+  "title": "forceReplenish calls can be front-run by transferring DBR",
+  "issueId": 208,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/208"
+}
