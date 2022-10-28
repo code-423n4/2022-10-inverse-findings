@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "Deposit can revert if callOnDepositCallback set to true, but underlying escrow does not support onDeposit hook.",
+  "issueId": 187,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/187"
+}
