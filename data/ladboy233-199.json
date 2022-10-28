@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "Accounting issue in DBR.sol, the debt amount is improperly tracked. The user can transfer the DBR to another address to avoid being penalized by the debt.",
+  "issueId": 199,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/199"
+}
