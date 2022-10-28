@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0xZaharina",
+  "risk": "3",
+  "title": "This is terrible: User can deploy the escrow address, deposit fund into the escrow address, call init to become the market, pretend to be the market owner, borrow fund, and withdraw collateral himself",
+  "issueId": 192,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/192"
+}
