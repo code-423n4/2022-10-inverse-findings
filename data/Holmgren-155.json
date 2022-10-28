@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Holmgren",
+  "risk": "2",
+  "title": "User can borrow DOLA indefinitely without settling DBR deficit by keeping their debt close to the allowed maximum",
+  "issueId": 155,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/155"
+}
