@@ -200,3 +200,16 @@ https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L245
         escrows[user] = escrow;
     }
 ```
+## State Variables Repeatedly Read Should be Cached
+SLOADs are cost 100 gas each after the 1st one whereas MLOADs/MSTOREs only incur 3 gas each. As such, storage values read multiple times should be cached in the stack memory the first time (costing only 1 SLOAD) and then re-read from this cache to avoid multiple SLOADs.
+
+For instance, `collateralFactorBps` should be cached in the following two instances:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L359-L360
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L376-L377
+
+The following code line should respectively be inserted before lines 359 and 376:
+
+```
+        uint256 collateralFactorBps = collateralFactorBps;
+```
