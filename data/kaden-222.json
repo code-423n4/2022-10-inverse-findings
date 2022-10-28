@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "kaden",
+  "risk": "3",
+  "title": "`Oracle.fixedPrices` mapping can never be safely used",
+  "issueId": 222,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/222"
+}
