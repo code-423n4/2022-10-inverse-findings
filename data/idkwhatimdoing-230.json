@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "idkwhatimdoing",
+  "risk": "2",
+  "title": "Use of Deprecated Chainlink Method latestAnswer ",
+  "issueId": 230,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/230"
+}
