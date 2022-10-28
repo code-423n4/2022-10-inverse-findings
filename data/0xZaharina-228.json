@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0xZaharina",
+  "risk": "2",
+  "title": "DBR token can be transferred to address(0) by user, sadly this is equal to burn the token, but affecting totalSupply",
+  "issueId": 228,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/228"
+}
