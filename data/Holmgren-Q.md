@@ -1,0 +1,3 @@
+`Oracle.viewPrice()` and `Oracle.getPrice()` will revert if `tokenDecimals() + feed.decimals > 36` (https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L87 and https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L121).
+
+It would be useful to comment that the prices returned by those methods have `decimals == 36 - tokenDecimals()`. For that matter, it's worth pointing out that all the logic in `Market.sol` around prices will not work if `collateral.decimals() > 36`.
