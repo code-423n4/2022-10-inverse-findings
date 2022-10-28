@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "codingsh",
+  "risk": "2",
+  "title": "Reentrancy vulnerabilities, dagerous usage of tx orgin and divide before mutiply, dangerous strict equalites incidents ",
+  "issueId": 174,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/174"
+}
