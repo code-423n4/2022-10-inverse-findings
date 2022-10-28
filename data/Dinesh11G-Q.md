@@ -41,9 +41,8 @@ Manual
 
 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+==============================================================================================
 
 
 
@@ -87,7 +86,8 @@ Manual
 
 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================
+
 
 ### Title: 
 Authorization through tx.origin
@@ -123,7 +123,8 @@ Caller: [ATTACKER], function: borrowAllowed(address,address,uint256), txdata: 0x
 Manual
 
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================
+
 
 ### Lines are Too Long
 Usually, lines in source code are limited to 80 characters. Today’s screens are much larger so it’s reasonable to stretch this in some cases. Since the files will most likely reside in GitHub, and GitHub starts using a scroll bar in all cases when the length is over 164 characters, the lines below should be split when they reach that length
@@ -140,7 +141,8 @@ https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f1348
 
 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================
+
 
 
 ### commented code should be resolved
@@ -155,3 +157,138 @@ https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f1348
 
 ### Tools used
 Done Manually
+
+
+
+==============================================================================================
+
+
+
+
+
+### External Call To User-Supplied Address
+
+Contract: GovTokenEscrow
+Function name: initialize(address,address)
+PC address: 916
+
+### Impact
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+
+In file: [GovTokenEscrow.sol](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L35)
+
+_token.delegate(_token.delegates(_beneficiary))
+
+Initial State:
+
+Account: [CREATOR], balance: 0x2, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , value: 0x0
+Caller: [SOMEGUY], function: initialize(address,address), txdata: 0x485cc955000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef0000000000000000000000000000000000000000000000000000000000000000, value: 0x0
+
+### Tools used
+Manual test
+
+==============================================================================================
+
+
+
+### Multiple Calls in a Single Transaction
+
+Contract: GovTokenEscrow
+Function name: initialize(address,address)
+PC address: 916
+
+### Impact
+Multiple calls are executed in the same transaction.
+This call is executed following another call within the same transaction. It is possible that the call never gets executed if a prior call fails permanently. This might be caused intentionally by a malicious callee. If possible, refactor the code such that each transaction only executes one external call or make sure that all callees can be trusted (i.e. they’re part of your own codebase).
+--------------------
+In file: [GovTokenEscrow.sol](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L35)
+
+_token.delegate(_token.delegates(_beneficiary))
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x218, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , value: 0x0
+Caller: [CREATOR], function: initialize(address,address), txdata: 0x485cc95500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, value: 0x0
+
+### Tools used
+Manual test
+
+
+==============================================================================================
+
+
+
+### External Call To User-Supplied Address
+
+Contract: GovTokenEscrow
+Function name: delegate(address)
+PC address: 1151
+
+### Impact
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+In file: [GovTokenEscrow.sol](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L68)
+
+token.delegate(delegatee)
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0xc000040007bc7d, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x161074001, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , value: 0x0
+Caller: [ATTACKER], function: initialize(address,address), txdata: 0x485cc955000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef, value: 0x0
+Caller: [ATTACKER], function: delegate(address), txdata: 0x5c19a95c0000000000000000000000001e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e, value: 0x0
+
+### Tools used
+Manual test
+
+
+==============================================================================================
+
+
+
+### External Call To User-Supplied Address
+
+Contract: GovTokenEscrow
+Function name: pay(address,uint256)
+PC address: 1623
+
+### Impact
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+In file: [GovTokenEscrow.sol](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L45)
+
+token.transfer(recipient, amount)
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x4000000007b2b5, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x820080, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , value: 0x0
+Caller: [ATTACKER], function: initialize(address,address), txdata: 0x485cc955000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef0000000000000000000000000000000000000000000000000000000000000000, value: 0x0
+Caller: [ATTACKER], function: pay(address,uint256), txdata: 0xc4076876000000000000000000000000010101010101010101010101010101021e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e, value: 0x0
+
+### Tools used
+Manual test
