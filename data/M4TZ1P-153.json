@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "M4TZ1P",
+  "risk": "2",
+  "title": "Oracle contract is using deprecated Chainlink function `latestAnswer`",
+  "issueId": 153,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/153"
+}
