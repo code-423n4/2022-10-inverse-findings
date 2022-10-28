@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "carlitox477",
+  "risk": "2",
+  "title": "Lack of price freshness check in ChainlinkOracle.sol#getPrice() allows a stale price to be used",
+  "issueId": 217,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/217"
+}
