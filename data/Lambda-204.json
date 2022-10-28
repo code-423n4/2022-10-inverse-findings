@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Lambda",
+  "risk": "2",
+  "title": "Negative chainlink feed prices not properly handled",
+  "issueId": 204,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/204"
+}
