@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "cccz",
+  "risk": "2",
+  "title": "When the price of the chainlink oracle fluctuates around the dampenedPrice, the price of the pessimistic oracle fluctuates wildly",
+  "issueId": 149,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/149"
+}
