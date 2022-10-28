@@ -207,3 +207,16 @@ Lines in source code are typically limited to 80 characters, but it’s reasonab
 
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L12-L14
 
+## Minimization of Truncation
+As an example, each respective code line below may be refactored as follows to minimize the frequency of truncation:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L360
+
+```
+    uint minimumCollateral = debt * 1 ether * 10000 / (oracle.getPrice(address(collateral), collateralFactorBps) * collateralFactorBps);
+```
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L377
+
+```
+    uint minimumCollateral = debt * 1 ether * 10000 / (oracle.viewPrice(address(collateral), collateralFactorBps) * collateralFactorBps);
+```
