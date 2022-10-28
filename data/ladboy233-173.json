@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "User may not able to withdraw the fund from the Market.sol, liquidator may not able to liquidate debt position, because the underlying escrow.pay revert / fail for XINVEscrow.sol due to insufficient balance",
+  "issueId": 173,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/173"
+}
