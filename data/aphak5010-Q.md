@@ -1,18 +1,18 @@
 # Inverse Finance Low Risk and Non-Critical Issues
 ## Summary
-| Risk      | Title |
-| ----------- | ----------- |
-| N-00      | Lines too long       |
-| N-01   | Remove TODO comments        |
-| N-02      | Remove code that is commented out       |
-| N-03   | Unlocked pragma        |
-| N-04   | Make `public` functions that are not called internally `external`         |
+| Risk      | Title | Instances
+| ----------- | ----------- | ----------- |
+| N-00      | Lines too long       | 4 |
+| N-01   | Remove TODO comments        | 1 |
+| N-02      | Remove code that is commented out       | 2 |
+| N-03   | Unlocked pragma        | 8 |
+| N-04   | Make `public` functions that are not called internally `external`         | 65 |
 
 ## [N-00] Lines too long
-The maximum line length should be 164 characters.<br>
+The maximum line length should be 164 characters.  
 That's because GiHub will not display lines longer than that on the screen without scrolling.
 
-There are 4 instances of this.<br>
+There are 4 instances of this.  
 [https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L16](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L16)
 
 [https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/INVEscrow.sol#L25](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/INVEscrow.sol#L25)
@@ -24,25 +24,25 @@ There are 4 instances of this.<br>
 ## [N-01] Remove TODO comments
 TODO comments should be removed from production code.
 
-There is 1 instance of this.<br>
+There is 1 instance of this.  
 [https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/INVEscrow.sol#L35](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/INVEscrow.sol#L35)
 
 ## [N-02] Remove code that is commented out
 Any code that is not needed should be removed from the production codebase.
 
-There are 2 instances of this.<br>
+There are 2 instances of this.  
 [https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L56-L60](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L56-L60)
 
 [https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/SimpleERC20Escrow.sol#L49-L53](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/SimpleERC20Escrow.sol#L49-L53)
 
 ## [N-03] Unlocked pragma
-All the contracts use `^0.8.13` as the Solidity version.<br>
+All the contracts use `^0.8.13` as the Solidity version.  
 It is considered best practice to use a locked Solidity version, thereby only allowing compilation with a specific version like `0.8.13`.
 
 ## [N-04] Make `public` functions that are not called internally `external`
 It is best practice to set the function visibility for functions that are not called by a contract internally to `external`.
 
-There are 65 instances of this.<br>
+There are 65 instances of this.  
 [https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L30](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L30)
 
 [https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L43](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L43)
