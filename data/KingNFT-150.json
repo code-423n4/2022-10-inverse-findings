@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "KingNFT",
+  "risk": "3",
+  "title": "Liquidators can extract more than expected value from escrow",
+  "issueId": 150,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/150"
+}
