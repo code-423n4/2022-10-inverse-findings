@@ -142,7 +142,7 @@ _mint(user, amount);
 ```
 https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L325
 
-This is dust amount unless the collateral decimals are very low and `replenishmentPriceBps` is also very low.
+This is dust amount not worth the gas unless token's decimals are very low and `replenishmentPriceBps` is also very low.
 
 ### 5. Oracle's lows are observational not actual
 The oracle design relies on the assumption that low prices are observed by the smart contract. There is no guarantee nor incentives that this would happen. In rarely used markets this could defy the original dampening intention. 
