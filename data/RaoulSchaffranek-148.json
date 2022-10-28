@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "RaoulSchaffranek",
+  "risk": "2",
+  "title": "Oracles don't work if decimals of the asset token and price feed is larger than 36",
+  "issueId": 148,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/148"
+}
