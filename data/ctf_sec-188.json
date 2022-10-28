@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "ctf_sec",
+  "risk": "2",
+  "title": "The current forceReplensihment + liquidation mechanism incentives bot  to extract MEV from user.",
+  "issueId": 188,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/188"
+}
