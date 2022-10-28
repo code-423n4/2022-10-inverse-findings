@@ -137,3 +137,21 @@ https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f1348
 https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Oracle.sol#L12
 
 https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Fed.sol#L99
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+### commented code should be resolved
+
+### Lines of commented
+
+https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L56-L60
+https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/SimpleERC20Escrow.sol#L49-L53
+
+
+### Uncomment because the Escrow contract handles deposit callbacks
+
+### Tools used
+Done Manually
