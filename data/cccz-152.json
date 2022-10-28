@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "cccz",
+  "risk": "2",
+  "title": "The user can borrow all dola in the market so that other users cannot replenish deficits via forceReplenish, after that the user can repay the debt and replenish deficits",
+  "issueId": 152,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/152"
+}
