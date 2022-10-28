@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "JTJabba",
+  "risk": "3",
+  "title": "`DolaBorrowingRights::permit` should increase allowance instead of setting it",
+  "issueId": 210,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/210"
+}
