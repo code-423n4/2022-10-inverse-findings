@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "carlitox477",
+  "risk": "2",
+  "title": "accrueDueTokens works improperly if (block.timestamp - lastUpdated[user]) * debt < 365 days",
+  "issueId": 215,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/215"
+}
