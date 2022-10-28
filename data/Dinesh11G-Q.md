@@ -41,7 +41,7 @@ Manual
 
 
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -84,6 +84,11 @@ pragma solidity 0.8.4;
 Manual
 
 
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### Title: 
 Authorization through tx.origin
 
@@ -117,3 +122,18 @@ Caller: [ATTACKER], function: borrowAllowed(address,address,uint256), txdata: 0x
 ### Tools Used:
 Manual
 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Lines are Too Long
+Usually, lines in source code are limited to 80 characters. Today’s screens are much larger so it’s reasonable to stretch this in some cases. Since the files will most likely reside in GitHub, and GitHub starts using a scroll bar in all cases when the length is over 164 characters, the lines below should be split when they reach that length
+
+### There are 4 instances of this issue:
+
+https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L16
+
+https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/INVEscrow.sol#L25
+
+https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Oracle.sol#L12
+
+https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Fed.sol#L99
