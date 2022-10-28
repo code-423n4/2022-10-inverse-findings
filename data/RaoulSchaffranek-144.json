@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "RaoulSchaffranek",
+  "risk": "3",
+  "title": "Approved users can steal tokens from approvers due to frontrunning vulnerability",
+  "issueId": 144,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/144"
+}
