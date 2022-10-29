@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "JTJabba",
+  "risk": "2",
+  "title": "Unsafe transfer of gov/operator privileges",
+  "issueId": 243,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/243"
+}
