@@ -62,7 +62,7 @@ Firstly, I would recommend to change the order of the contract variables' declar
     uint24 public liquidationFactorBps = 5000; // 50% by default
     bool public borrowPaused;
 
-In this contract, we can see that there are 5 `uint` variables that will never exceed the value of 10000: `collateralFactorBps`, `replenishmentIncentiveBps`, `liquidationIncentiveBps`, `liquidationFeeBps` and `liquidationFactorBps`. Therefore, we can pack the first 4 into a `uint16` variable type (uint16 max value = 65535) and the last on can be a `uint24` (max value = 16777215).
+In this contract, we can see that there are 5 `uint` variables that will never exceed the value of 10000: `collateralFactorBps`, `replenishmentIncentiveBps`, `liquidationIncentiveBps`, `liquidationFeeBps` and `liquidationFactorBps`. Therefore, we can pack the first 4 into a `uint16` variable type (uint16 max value = 65535) and the last one can be a `uint24` (max value = 16777215).
 
 Bytes used per type:
 - `uint16` = 2 bytes
