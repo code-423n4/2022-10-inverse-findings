@@ -2,11 +2,52 @@
 ## Summary
 | Risk      | Title | Instances
 | ----------- | ----------- | ----------- |
+| L-00      | Use 2-Step-Process for assigning roles       | - |
+| L-01      | Missing zero address can lead to loss of voting power       | - |
 | N-00      | Lines too long       | 4 |
 | N-01   | Remove TODO comments        | 1 |
 | N-02      | Remove code that is commented out       | 2 |
 | N-03   | Unlocked pragma        | 8 |
 | N-04   | Make `public` functions that are not called internally `external`         | 65 |
+| N-05   | Typos         | 2 |
+| N-06   | Comment not according to logic         | 1 |
+
+## [L-00] Use 2-Step-Process for assigning roles
+A 2-Step-Process should be used for assigning roles that are critical to the operation of the contract.  
+E.g. if a wrong `gov` is set in the Market contract, the contract is lost.
+
+There several roles that a 2-Step-Process should be implemented for:  
+Market.sol
+* gov
+* lender
+* pauseGuardian
+
+Fed.sol
+* gov
+* chair
+
+BorrowController.sol
+* operator
+
+The 2-Step-Process can be implemented like `setPendingOperator(address newOperator_)` and `claimOperator()` in the Oracle and DBR contracts where a 2-Step-Process is already used.
+
+## [L-01] Missing zero address can lead to loss of voting power
+The `GovTokenEscrow` and `INVEscrow` can both hold ERC20 tokens with a `delegate` function.  
+It is left to the implementation of the ERC20 token to check if the address specified is the zero address.  
+However it should not be relied on this and the escrow contract itself should check for zero address.  
+
+[https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L66-L69](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L66-L69)
+
+[https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/INVEscrow.sol#L90-L94](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/INVEscrow.sol#L90-L94)
+
+Fix:
+```solidity
+    function delegate(address delegatee) public {
+        require(msg.sender == beneficiary);
++       require(delegatee != address(0));
+        token.delegate(delegatee);
+    }
+```
 
 ## [N-00] Lines too long
 The maximum line length should be 164 characters.  
@@ -175,5 +216,15 @@ There are 65 instances of this.
 
 [https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L349](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L349)
 
+## [N-05] Typos
+### `The new replen` should be called something like `The new replenishment price in basis points`
+[https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L60](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L60)
 
+### `amount od` should say `amount of`
+[https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L201](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol#L201)
 
+## [N-06] Comment not according to logic
+[https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L63](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/escrows/GovTokenEscrow.sol#L63)  
+
+The comment states that the voting power of the underlying xINV is delegated.  
+However in the GovTokenEscrow contract, there is no xINV voting power delegated.
