@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "djxploit",
+  "risk": "2",
+  "title": "`repay` function can be DOSed",
+  "issueId": 252,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/252"
+}
