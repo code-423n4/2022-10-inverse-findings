@@ -292,3 +292,36 @@ Caller: [ATTACKER], function: pay(address,uint256), txdata: 0xc40768760000000000
 
 ### Tools used
 Manual test
+
+
+==============================================================================================
+
+
+
+### External Call To User-Supplied Address
+
+Contract: SimpleERC20Escrow
+Function name: pay(address,uint256)
+PC address: 962
+
+### Impact
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+In file: SimpleERC20Escrow.sol:38
+
+token.transfer(recipient, amount)
+
+Initial State:
+
+Account: [CREATOR], balance: 0x9fdf9, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x1000000200, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , value: 0x0
+Caller: [ATTACKER], function: initialize(address,address), txdata: 0x485cc955000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef0000000000000000000000000000000000000000000000000000000000000000, value: 0x0
+Caller: [ATTACKER], function: pay(address,uint256), txdata: 0xc407687600000000000000000000000001010101410101010101010101010102484848484848484848484848484848484848484848484848484848484848484848484848, value: 0x0
+
+
+### Tools Used
+Manual
