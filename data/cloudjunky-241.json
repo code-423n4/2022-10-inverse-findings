@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "cloudjunky",
+  "risk": "2",
+  "title": "Use of unsafe transfer and transferFrom for ERC20 tokens",
+  "issueId": 241,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/241"
+}
