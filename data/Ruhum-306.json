@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Ruhum",
+  "risk": "2",
+  "title": "Oracle will likely fail with a token that has more than 18 decimals",
+  "issueId": 306,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/306"
+}
