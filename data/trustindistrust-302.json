@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "trustindistrust",
+  "risk": "2",
+  "title": "Liquidations under certain circumstances can leak small amounts of value via unclaimed protocol fees",
+  "issueId": 302,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/302"
+}
