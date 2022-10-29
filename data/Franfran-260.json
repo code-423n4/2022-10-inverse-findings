@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Franfran",
+  "risk": "3",
+  "title": "Oracle feed price querying is using a highly discouraged function",
+  "issueId": 260,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/260"
+}
