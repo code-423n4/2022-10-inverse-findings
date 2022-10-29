@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0xbepresent",
+  "risk": "2",
+  "title": "DBR.sol::addMarket() should be managed in a different way in order to avoid protocol malfunction",
+  "issueId": 292,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/292"
+}
