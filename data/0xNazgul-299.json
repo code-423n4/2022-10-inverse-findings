@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0xNazgul",
+  "risk": "2",
+  "title": "[NAZ-M1] Use of deprecated Chainlink function `latestAnswer`",
+  "issueId": 299,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/299"
+}
