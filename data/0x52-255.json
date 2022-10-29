@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0x52",
+  "risk": "2",
+  "title": "Market#forceReplenish will cease to function if market lends out all of it's dola",
+  "issueId": 255,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/255"
+}
