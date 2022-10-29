@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Rolezn",
+  "risk": "2",
+  "title": "Chainlik pricer feed is using a deprecated API call",
+  "issueId": 283,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/283"
+}
