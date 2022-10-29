@@ -3,7 +3,7 @@
 | Risk      | Title | Instances
 | ----------- | ----------- | ----------- |
 | L-00      | Use 2-Step-Process for assigning roles       | - |
-| L-01      | Missing zero address can lead to loss of voting power       | - |
+| L-01      | Missing zero address check can lead to loss of voting power       | 2 |
 | N-00      | Lines too long       | 4 |
 | N-01   | Remove TODO comments        | 1 |
 | N-02      | Remove code that is commented out       | 2 |
@@ -31,7 +31,7 @@ BorrowController.sol
 
 The 2-Step-Process can be implemented like `setPendingOperator(address newOperator_)` and `claimOperator()` in the Oracle and DBR contracts where a 2-Step-Process is already used.
 
-## [L-01] Missing zero address can lead to loss of voting power
+## [L-01] Missing zero address check can lead to loss of voting power
 The `GovTokenEscrow` and `INVEscrow` can both hold ERC20 tokens with a `delegate` function.  
 It is left to the implementation of the ERC20 token to check if the address specified is the zero address.  
 However it should not be relied on this and the escrow contract itself should check for zero address.  
