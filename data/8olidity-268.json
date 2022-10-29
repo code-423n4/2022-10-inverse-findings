@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "8olidity",
+  "risk": "2",
+  "title": "Sending DBR to address(0) will make totalSupply() unusable",
+  "issueId": 268,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/268"
+}
