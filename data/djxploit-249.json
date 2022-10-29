@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "djxploit",
+  "risk": "3",
+  "title": "withdrawOnBehalf() failed txs are open to replay attacks",
+  "issueId": 249,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/249"
+}
