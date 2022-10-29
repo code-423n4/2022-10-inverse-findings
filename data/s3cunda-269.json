@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "s3cunda",
+  "risk": "2",
+  "title": "Not using safeERC20 in market contract",
+  "issueId": 269,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/269"
+}
