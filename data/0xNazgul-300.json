@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0xNazgul",
+  "risk": "3",
+  "title": "[NAZ-H1] No Check For Paused Market On `forceReplenish()`",
+  "issueId": 300,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/300"
+}
