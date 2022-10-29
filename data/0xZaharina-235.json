@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0xZaharina",
+  "risk": "2",
+  "title": "Exchange rate can be manipulated in xINV.sol to affect borrow limit in Market.sol",
+  "issueId": 235,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/235"
+}
