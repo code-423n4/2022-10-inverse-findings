@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0xbepresent",
+  "risk": "2",
+  "title": "Market.sol::setGov() should be a two-step transfer ownership.",
+  "issueId": 308,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/308"
+}
