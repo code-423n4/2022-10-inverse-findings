@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "8olidity",
+  "risk": "3",
+  "title": "forceReplenish(),borrowInternal() do not judge dola balances in contracts",
+  "issueId": 273,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/273"
+}
