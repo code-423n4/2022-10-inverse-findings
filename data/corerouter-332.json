@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "corerouter",
+  "risk": "2",
+  "title": "It is possible to mint to a zero address.",
+  "issueId": 332,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/332"
+}
