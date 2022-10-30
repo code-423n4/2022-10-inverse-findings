@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "TomJ",
+  "risk": "3",
+  "title": "Oracle Price Calculation will Return Wrong Price for Certain Tokens",
+  "issueId": 526,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/526"
+}
