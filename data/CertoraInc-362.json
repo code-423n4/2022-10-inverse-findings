@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "CertoraInc",
+  "risk": "3",
+  "title": "Liquidatin function does not consider cases where the liquidate user does not have enough collateral to pay.",
+  "issueId": 362,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/362"
+}
