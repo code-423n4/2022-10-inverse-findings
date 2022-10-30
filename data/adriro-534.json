@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "adriro",
+  "risk": "2",
+  "title": "DBR `totalSupply` function doesn't factor pending accrued debt",
+  "issueId": 534,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/534"
+}
