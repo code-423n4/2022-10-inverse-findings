@@ -11,6 +11,8 @@ function invalidateNonce() public {
 
 ```
 
+Suggestion:
+
 ```solidity
 function invalidateNonce() public {
   unchecked {
@@ -40,6 +42,8 @@ function contraction(IMarket market, uint amount) public {
 }
 
 ```
+
+Suggestion:
 
 ```solidity
 function contraction(IMarket market, uint amount) public {
