@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Chom",
+  "risk": "3",
+  "title": "The decimal calculation is wrong for tokens with decimals < 18, it will highly inflate the price.",
+  "issueId": 453,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/453"
+}
