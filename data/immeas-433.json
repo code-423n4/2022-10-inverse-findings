@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "immeas",
+  "risk": "2",
+  "title": "cannot claim profit when a large portion of `marketValue` is lended out",
+  "issueId": 433,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/433"
+}
