@@ -213,3 +213,78 @@ The following code line should respectively be inserted before lines 359 and 376
 ```
         uint256 collateralFactorBps = collateralFactorBps;
 ```
+## Use of Modifiers for Repeated Checks
+Consider using modifiers for common checks within different functions. This will result in less code duplication in the given contract and add significant readability into the code base. For instance, the first if statement of `viewPrice()` and `getPrice()` in `Oracle.sol` may have a modifier in place for the identical check:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L79
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L113
+
+```
+    modifier fixedPrices () {
+        if(fixedPrices[token] > 0) return fixedPrices[token];
+        _;
+    }
+```
+## Identical Code Block Should Be Grouped Into an Internal Function
+The logic block of `viewPrice()` and `getPrice()` in `Oracle.sol` are almost identical except for a minor central part. They could be grouped and refactored into an internal function as follows:
+
+```
+    function getOrViewPrice(address token, uint collateralFactorBps, bool write) external returns (uint) {
+        if(fixedPrices[token] > 0) return fixedPrices[token];
+        if(feeds[token].feed != IChainlinkFeed(address(0))) {
+            // get price from feed
+            uint price = feeds[token].feed.latestAnswer();
+            require(price > 0, "Invalid feed price");
+            // normalize price
+            uint8 feedDecimals = feeds[token].feed.decimals();
+            uint8 tokenDecimals = feeds[token].tokenDecimals;
+            uint8 decimals = 36 - feedDecimals - tokenDecimals;
+            uint normalizedPrice = price * (10 ** decimals);
+            // potentially store price as today's low
+            uint day = block.timestamp / 1 days;
+            uint todaysLow = dailyLows[token][day];
+            if (write) {
+                if(todaysLow == 0 || normalizedPrice < todaysLow) {
+                    dailyLows[token][day] = normalizedPrice;
+                    todaysLow = normalizedPrice;
+                    emit RecordDailyLow(token, normalizedPrice);
+                }
+            }
+            // get yesterday's low
+            uint yesterdaysLow = dailyLows[token][day - 1];
+            // calculate new borrowing power based on collateral factor
+            uint newBorrowingPower = normalizedPrice * collateralFactorBps / 10000;
+            uint twoDayLow = todaysLow > yesterdaysLow && yesterdaysLow > 0 ? yesterdaysLow : todaysLow;
+            if(twoDayLow > 0 && newBorrowingPower > twoDayLow) {
+                uint dampenedPrice = twoDayLow * 10000 / collateralFactorBps;
+                return dampenedPrice < normalizedPrice ? dampenedPrice: normalizedPrice;
+            }
+            return normalizedPrice;
+
+        }
+        revert("Price not found");
+    }
+```
+`viewPrice()` and `getPrice()` may respectively be refactored as:
+
+```
+    function viewPrice(address token, uint collateralFactorBps) external view returns (uint) {
+        getOrViewPrice (token, collateralFactorBps, false);
+    }
+``` 
+```
+    function getPrice(address token, uint collateralFactorBps) external view returns (uint) {
+        getOrViewPrice (token, collateralFactorBps, true);
+    }
+``` 
+## Return Value Check
+It is a good practice to allow an anticipated failed transaction to transpire as early as possible to avoid any unnecessary wastage of gas. This would object to the following line of code commented thereupon:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/escrows/INVEscrow.sol#L62   
+
+## Functions of Similar Logic Could be Merged
+The access controlled `allow()` and `deny()` in BorrowController.sol could be merged into and replaced by one single function as refactored below:
+
+```
+    function allowOrDeny(address contract, bool auth)  public onlyOperator { contractAllowlist[allowedContract] = auth; }
+```
