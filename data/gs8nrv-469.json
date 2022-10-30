@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "gs8nrv",
+  "risk": "3",
+  "title": "Two day low oracle used in `Market.liquidate()` makes the system highly at risk in an oracle attack ",
+  "issueId": 469,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/469"
+}
