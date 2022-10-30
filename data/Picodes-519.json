@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Picodes",
+  "risk": "3",
+  "title": "`forceReplenish` could be frontrun to avoid paying interests ",
+  "issueId": 519,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/519"
+}
