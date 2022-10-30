@@ -1,5 +1,12 @@
 ## Gas
 
+### Storage Optimisation
+Changing order of storage slots 20 000 gas saved at deployment per slot saved. Ethereum storage is composed of slots of 32 bytes, the problem is that writing is expensive. (Up to 20000gas using “cold” writing) https://docs.soliditylang.org/en/v0.8.13/internals/layout_in_storage.html
+
+#### Effected contracts
+- DBS.sol
+- Market.sol
+
 ### DBR.sol
 Potential for minor contract storage optimisation in [DBR.sol](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol#L11-L28). Constant decimals is of type uint8 taking up 1 byte of storage is surrounded by a string and uint256 both taking up 32bytes or an entire storage slot each. Constant decimals can be put together with ether address operator or pendingOperator both of size bytes 20 to share a single slot utilizing 21 of 32 bytes rather than having a slot occupying 1 of 32 bytes as is the current case for constant decimals.
 
