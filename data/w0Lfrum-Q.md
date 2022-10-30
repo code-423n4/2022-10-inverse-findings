@@ -6,8 +6,6 @@ The overall code quality for the Inverse Finance contracts is great. The code is
 
 There can be improvements in the code by rectifying non-critical issues like specifying the pragma compiler version. Also, making the use of custom error messages will enhance code clarity along with saving gas fees.
 
-It would also be better if the interfaces are inherited from separate files onto the contract files instead of placing both the interfaces and contracts in the same .sol file.
-
 ## Non-Critical Findings
 
 ### NC01: Unspecified Pragma Compiler Version
