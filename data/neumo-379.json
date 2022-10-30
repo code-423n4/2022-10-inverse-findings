@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "neumo",
+  "risk": "2",
+  "title": "Avoidable misconfiguration could lead to INVEscrow contract not minting xINV tokens",
+  "issueId": 379,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/379"
+}
