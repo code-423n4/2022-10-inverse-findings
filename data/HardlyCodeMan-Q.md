@@ -1,0 +1,3 @@
+## QA
+
+Multiple switches between types uint and uint256 while not making a difference to the code operation, assembly or gas usage, its purely asthetic forunity and code readability. There are 192 uses of uint across 8 files in scope, while there are 29 uses of uint256 across 2 files in scope ([Market.sol](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/Market.sol) [DBR.sol](https://github.com/code-423n4/2022-10-inverse/blob/3e81f0f5908ea99b36e6ab72f13488bbfe622183/src/DBR.sol))
