@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "elprofesor",
+  "risk": "3",
+  "title": "`Oracle.getPrice()` and `Oracle.viewPrice()` uses deprecated chainlink API leading to DOS for collateral calculations",
+  "issueId": 383,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/383"
+}
