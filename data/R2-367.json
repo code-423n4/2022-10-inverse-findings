@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "R2",
+  "risk": "2",
+  "title": "1-phase operator changing in ``BorrowController``",
+  "issueId": 367,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/367"
+}
