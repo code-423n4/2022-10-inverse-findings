@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "imare",
+  "risk": "2",
+  "title": "Repeated minting is possible by anyone in ``INVEscrow::onDeposit()``",
+  "issueId": 429,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/429"
+}
