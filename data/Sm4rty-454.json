@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Sm4rty",
+  "risk": "2",
+  "title": "initailize function can be frontrun by anyone",
+  "issueId": 454,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/454"
+}
