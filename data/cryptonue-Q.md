@@ -1,10 +1,15 @@
-# [L] No two way transfer on setting Governance `setGov()`
+# [L] There is no two way transfer on setting Governance `setGov()` and setting Operator `setOperator()`
 
 In `Market.sol` there is a modifier named `onlyGov` which control the market crucial function. To update this `onlyGov` address, there is only one function `setGov()` without two step transfer pattern. This can cause a problem if the function is being set with wrong gov address because it can't revert the value. Consider to use two step transfer patter for this kind of `ownership` function.
 
+there is also an instance of this issue, `setOperator` inside `BorrowController.sol` contract
 ```
 File: Market.sol
 130:     function setGov(address _gov) public onlyGov { gov = _gov; }
+
+File: BorrowController.sol
+26:     function setOperator(address _operator) public onlyOperator { operator = _operator; }
+
 ```
 
 # [L] Borrow function does not check if amount > 0
