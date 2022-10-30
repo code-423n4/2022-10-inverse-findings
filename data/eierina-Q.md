@@ -13,7 +13,8 @@ function escrowBalanceOf(address user) internal view returns (uint256 balance) {
 function escrowPay(addres from, address recipient, uint amount) external {
 	IEscrow escrow = predictEscrow(from);
 	require(escrow != IEscrow(address(0)), "Sender has no escrow");
-	
+
+	escrow.pay(recipient, amount);
 }
 
 ```
