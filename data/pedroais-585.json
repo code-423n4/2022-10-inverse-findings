@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "pedroais",
+  "risk": "3",
+  "title": "Decimals are computed in the wrong way if the collateral token doesn't have 18 decimals",
+  "issueId": 585,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/585"
+}
