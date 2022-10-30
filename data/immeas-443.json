@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "immeas",
+  "risk": "2",
+  "title": "`Market::forceReplenish` can be DoSed",
+  "issueId": 443,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/443"
+}
