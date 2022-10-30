@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "minhtrng",
+  "risk": "2",
+  "title": "Fixed prices should not be used for collateral and in this case also provides a centralization risk",
+  "issueId": 499,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/499"
+}
