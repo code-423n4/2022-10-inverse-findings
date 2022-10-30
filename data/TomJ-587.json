@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "TomJ",
+  "risk": "2",
+  "title": "Timelock Contract should be used to avoid malicious governance",
+  "issueId": 587,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/587"
+}
