@@ -1,6 +1,6 @@
-Typos:
+Issue 1:
 
-There are 4 instances of this issue:
+Typos, There are 4 instances of this issue:
 
 1- https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L172
 
@@ -21,10 +21,12 @@ correct: @notice Get the DBR deficit of an address. Will return 0 if the user ha
 4-https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L129
 
 Error: @dev The deficit of a user is calculated as the difference between the user's accrued DBR deb + due DBR debt and their balance.
-correct:  @dev The deficit of a user is calculated as the difference between the user's accrued DBR debt + due DBR debt and their balance. (Missing t)
+correct:  @dev The deficit of a user is calculated as the difference between the user's accrued DBR debt + due DBR debt and their balance. (Missing t).
 
-************************************************************************************************************************************
+Issue 2:
 
 Consider Using more recent version of solidity (0.8.13 is not recommended for deployment) like 0.8.16.
+
+
 
 
