@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "If transferring DBR after borrowing DOLA in same transaction, DBR amount that is used already for borrowing DOLA can still be shared to allow users who do not own DBR to borrow DOLA",
+  "issueId": 579,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/579"
+}
