@@ -96,3 +96,30 @@ Zero address, zero value, and empty string checks implemented at the constructor
 [Lines 36 - 42](https://github.com/code-423n4/2022-10-inverse/blob/main/src/Fed.sol#L36-L42)
 [Lines 61 - 90](https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L61-L90)
 [Lines 29 - 33](https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L29-L33)
+
+## USE `UINT256` INSTEAD OF 'UINT`
+There are many instances of `uint` throughout all the code bases. In favor of explicitness, consider replacing all instances of `uint` with `uint256`.
+
+## MISSING NATSPEC
+As documented in the link below:
+
+https://docs.soliditylang.org/en/v0.8.16/natspec-format.html
+
+It is recommended using a special form of comments, i.e., the Ethereum Natural Language Specification Format (NatSpec) to provide rich documentation for functions, return variables and more.
+
+Here is an instance found.
+
+[Lines 38 - 112](https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L38-L112)
+
+## NEW AND OLD VALUES SHOULD BE EMITTED
+It is recommended having events associated with setter functions emit both the new and old values instead of just the new value. Here are some of the instances found.
+
+[Lines 66 - 71](https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L66-L71)
+[Lines 70 - 75](https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L70-L75)
+
+## TODO
+Open TODO can point to an architecture or programming issue needing to be resolved. It is recommended resolving them before deploying.
+
+Here is one instance found.
+
+[Line 35](https://github.com/code-423n4/2022-10-inverse/blob/main/src/escrows/INVEscrow.sol#L35)
