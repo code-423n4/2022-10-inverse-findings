@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "gs8nrv",
+  "risk": "2",
+  "title": "Oracle not a 2 day low if `getPrice()` hasn't been called during the day",
+  "issueId": 463,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/463"
+}
