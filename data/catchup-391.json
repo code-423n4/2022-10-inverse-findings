@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "catchup",
+  "risk": "2",
+  "title": "No liquidation fee is deducted if escrow balance is lower than the fee",
+  "issueId": 391,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/391"
+}
