@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "gs8nrv",
+  "risk": "3",
+  "title": "In `DBR.sol` when burning `dueTokensAccrued` is not decrased",
+  "issueId": 474,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/474"
+}
