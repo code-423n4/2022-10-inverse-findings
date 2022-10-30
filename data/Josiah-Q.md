@@ -36,7 +36,7 @@ Several critical operations do not trigger events, which will make it difficult 
 [Lines 48 - 69](https://github.com/code-423n4/2022-10-inverse/blob/main/src/Fed.sol#L48-L69)
 [Lines 62 - 65](https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L62-L65)
 
-## Add a Timelock to Critical Parameter Change
+## TIMELOCK FOR CRITICAL PARAMETER CHANGE
 It is a good practice giving time to users to react and adjust to critical changes with a mandatory time window between the changes. The first step is simply broadcasting to users with a specific change that is coming whilst the second step commits that change after an appropriate period of waiting. This would allow time for users opposing to the change to withdraw within the set time frame. A timelock provides more guarantees and reduces the level of trust required, thus decreasing risk for users. It also indicates that the project is legitimate (less risk of the owner making a malicious act). Specifically, privileged roles could use front running to make malicious changes just ahead of incoming transactions, or purely accidental negative effects could occur due to the unfortunate timing of changes. Here are the instances found.
 
 [Lines 118 - 197](https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L118-L197)
