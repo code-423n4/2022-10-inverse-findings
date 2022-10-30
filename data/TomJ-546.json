@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "TomJ",
+  "risk": "2",
+  "title": "`Oracle.sol`:`setFeed` function shouldn't allow `tokenDecimals` to be set through parameter",
+  "issueId": 546,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/546"
+}
