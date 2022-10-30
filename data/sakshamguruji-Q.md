@@ -10,6 +10,10 @@ Remediation:
 Use something like `require(msg.sender == owner)` and in the constructor set `owner = msg.sender` so that msg.sender is the owner of the contract or the who deployed the contract.
 
 
+## CHECK IF borrowController !=0
+
+In the function https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L389 it checks `borrowController != IBorrowController(address(0))` , but if it is zero then it would bypass that check and execute the function without the check if the borrowController is allowed to borrow or not. 
+Simply add a check `borrowController !=0`
 ## EVENT IS MISSING INDEXED FIELDS
 
 Index event fields make the field more quickly accessible to off-chain tools that parse events. However, note that each index field costs extra gas during emission, so it’s not necessarily best to index the maximum allowed per event (three fields). Each event should use three indexed fields if there are three or more fields, and gas usage is not particularly of concern for the events in question. If there are fewer than three fields, all of the fields should be indexed.
