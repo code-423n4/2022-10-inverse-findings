@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "elprofesor",
+  "risk": "2",
+  "title": "Escrow payments may fail to revert if token is non-standard IERC20",
+  "issueId": 382,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/382"
+}
