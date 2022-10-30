@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "__141345__",
+  "risk": "2",
+  "title": "ERC20 tokens with pause mode could break repay/liquidation functionality",
+  "issueId": 351,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/351"
+}
