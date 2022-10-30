@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "R2",
+  "risk": "2",
+  "title": "Inconsistent checks for ``DolaBorrowingRights.replenishmentPriceBps``",
+  "issueId": 363,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/363"
+}
