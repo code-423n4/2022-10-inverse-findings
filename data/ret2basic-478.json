@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "ret2basic",
+  "risk": "2",
+  "title": "The check `msg.sender == tx.origin` is not sufficient against delegatecall",
+  "issueId": 478,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/478"
+}
