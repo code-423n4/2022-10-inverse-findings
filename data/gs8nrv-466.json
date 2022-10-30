@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "gs8nrv",
+  "risk": "2",
+  "title": "`Market.forceReplenish` condition on collateralValue harmfull for liquidation",
+  "issueId": 466,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/466"
+}
