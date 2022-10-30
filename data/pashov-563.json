@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "pashov",
+  "risk": "2",
+  "title": "Admin can set very low or very high value for setting fees & collateral factor in `Market.sol` resulting in value loss and/or DoS",
+  "issueId": 563,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/563"
+}
