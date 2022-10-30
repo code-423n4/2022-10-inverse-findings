@@ -1,0 +1,8 @@
+    1.  Use custom errors rather than revert()/require() strings to save gas.
+    2.  Splitting require() that use '&&' saves gas (found line 75 of Market.sol).
+    3.  Don't compare boolean expressions to boolean literals. Use 'require(X, ...)' instead of 'require(X == true' in the require (found line 350 of DBR.sol).
+    4.  Do not use '+=' or '-=' ('_totalSupply += amount', found line 360 in DBR.sol). Instead use "_totalSupply = _totalSupply + amount" in order to save some gas.
+    5.  Require() string longer than 32 bytes cost extra gas. For exemple, line 63 of DBR.sol, the require error string ("replenishment price must be over 0") is 34 bytes long when "replenishment price must be > 0" is 31 bytes long, and therefore cheaper in gas and just as clear.
+    6.  Use assembly to write storage value. Line 53 in setPendingOperator() of DBR.sol, instead of "pendingOperator = newOperator_;", use  assembly {sstore(pendingOperator.slot, newOperator_)} to save gas. Same for 'setBorrowController()', 'setGov()', 'setLender()' ...
+    7.  Use '!= 0' instead of ' > 0' (ex: 'if(profit > 0) {' in Fed.sol line 133, or 'require(newReplenishmentPriceBps_ > 0,' line 63 in DBR.sol).
+    8.  Using bool for storage incurs overhead. (ex: mapping(address => bool) public contractAllowlist; line 11 in BorrowController.sol). Use uint256(1) and uint256(2) for true/false to avoid a Gwarmaccess (100 gas) for the extra SLOAD, and to avoid Gsset (20000 gas) when changing from ‘false’ to ‘true’, after having been ‘true’ in the past. Same issue in Market.sol with bool borrowPaused
