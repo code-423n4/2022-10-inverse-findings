@@ -69,7 +69,7 @@ Meaning that the value cannot be set between 1 and 10000, but instead between 1 
 File: `Market.sol` [Line 172](https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L172)
 
 ```
-function setReplenismentIncentiveBps(uint _replenishmentIncentiveBps) public onlyGov {
+function setReplenismentIncentiveBps
 ```
 
 Change "Replenisment" to "Replenishment".
