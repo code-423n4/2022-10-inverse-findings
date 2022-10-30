@@ -5,6 +5,11 @@ Accidently transferring operator rights to an unowned address, will freeze the `
 ## Incorrect combination of `Market.escrowImplementation` and `Market.callOnDepositCallback` can cause deposits to revert
 If `callOnDepositCallback` is set to true, then `escrow.onDeposit()` will be called, but only `INVEscrow` implements this function and if the implementation points to any other escrow, then `deposit` will revert.
 
+## Market governance transfer should be two-step as only it can unpause borrows
+
+## Division before multiplication in `Market.getWithdrawalLimitInternal`
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L360
+
 # Non-Critical
 ## Missing events for state changes in `BorrowController.allow` and `BorrowController.deny`
 
