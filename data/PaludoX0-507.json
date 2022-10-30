@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "PaludoX0",
+  "risk": "2",
+  "title": "globalSupply variable in Fed.sol could be 0 and revert contraction function",
+  "issueId": 507,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/507"
+}
