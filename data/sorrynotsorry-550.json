@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "sorrynotsorry",
+  "risk": "2",
+  "title": "Consideration of tokens with decimals higher than 18",
+  "issueId": 550,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/550"
+}
