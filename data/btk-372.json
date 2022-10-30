@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "btk",
+  "risk": "2",
+  "title": "Missing zero address CHECK",
+  "issueId": 372,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/372"
+}
