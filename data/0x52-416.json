@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "0x52",
+  "risk": "2",
+  "title": "Malicious/Compromised operator cannot be removed from DBR by governance besides redeploying nearly all ecosystem contracts",
+  "issueId": 416,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/416"
+}
