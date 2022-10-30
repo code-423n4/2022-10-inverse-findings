@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "minhtrng",
+  "risk": "2",
+  "title": "Deposit functionality of market can be bricked for current SimpleERC20Escrow and GovTokenEscrow implementations",
+  "issueId": 506,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/506"
+}
