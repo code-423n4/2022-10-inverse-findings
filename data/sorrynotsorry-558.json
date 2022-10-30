@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "sorrynotsorry",
+  "risk": "2",
+  "title": "Misleading code in BorrowController including no validation of the amounts to be borrowed.",
+  "issueId": 558,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/558"
+}
