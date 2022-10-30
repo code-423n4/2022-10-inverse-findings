@@ -89,7 +89,7 @@ interface IERC20 {
 
 However, it does not account for another nonstandard ERC20 scenario: tokens with missing return values. Tokens like `USDT`, `BNB`, and `OMG` have [missing return values](https://github.com/d-xo/weird-erc20#missing-return-values) and transfers will revert if they are used as collateral for a market.
 
-I consider this low risk since allowed tokens require approval by governance, but ensure you do due diligence on the token contracts for any new collateral types before adding them. Alternatively, use a safe transfer helper to abstract over inconsistend ERC20 implementations.
+I consider this low risk since allowed tokens require approval by governance, but ensure you do due diligence on the token contracts for any new collateral types before adding them. Alternatively, use a safe transfer helper to abstract over inconsistent ERC20 implementations.
 
 ### `Market`: Governance can frontrun liquidations to change incentives
 
