@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "elprofesor",
+  "risk": "3",
+  "title": "Arbitrary user can prevent withdrawals on any users through liquidation",
+  "issueId": 381,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/381"
+}
