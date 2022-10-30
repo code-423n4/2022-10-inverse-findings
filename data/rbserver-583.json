@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "rbserver",
+  "risk": "2",
+  "title": "Calling `repay` function sends less DOLA to `Market` contract when `forceReplenish` function is not called while it could be called",
+  "issueId": 583,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/583"
+}
