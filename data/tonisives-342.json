@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "tonisives",
+  "risk": "2",
+  "title": "Oracle.setFeed has unnecessary decimals parameter",
+  "issueId": 342,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/342"
+}
