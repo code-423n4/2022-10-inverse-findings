@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "d3e4",
+  "risk": "2",
+  "title": "Oracle.sol uses deprecated Chainlink API `latestAnswer()`",
+  "issueId": 601,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/601"
+}
