@@ -16,6 +16,20 @@ Here are some of the instances:
 
 [Line 296-305](https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L296-L305)
 
+## Capitalize Constants
+Constants should be named with all capital letters with underscores separating words
 
+Example: 
 
+```
+Line 13:    uint8 public constant decimals = 18;
+```
+[Line 13](https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L13)
 
+Should be refactored to 
+
+```
+Line 13:    uint8 public constant DECIMALS = 18;
+```
+Background Information
+[Constants Naming Conventions](https://github.com/code-423n4/2022-10-inverse/blob/main/src/DBR.sol#L13)
