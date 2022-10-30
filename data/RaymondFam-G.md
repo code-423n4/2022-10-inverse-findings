@@ -288,3 +288,17 @@ The access controlled `allow()` and `deny()` in BorrowController.sol could be me
 ```
     function allowOrDeny(address contract, bool auth)  public onlyOperator { contractAllowlist[allowedContract] = auth; }
 ```
+## Unchecked SafeMath Saves Gas
+"Checked" math, which is default in ^0.8.0 is not free. The compiler will add some overflow checks, somehow similar to those implemented by `SafeMath`. While it is reasonable to expect these checks to be less expensive than the current `SafeMath`, one should keep in mind that these checks will increase the cost of "basic math operation" that were not previously covered. This particularly concerns variable increments in for loops. When no arithmetic overflow/underflow is going to happen, `unchecked { ... }` to use the previous wrapping behavior further saves gas.
+
+For instance, the following code block could be refactored as:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L395-L397
+ 
+```
+    unchecked { 
+        debts[borrower] += amount;
+        require(credit >= debts[borrower], "Exceeded credit limit");
+        totalDebt += amount;
+    }
+```
