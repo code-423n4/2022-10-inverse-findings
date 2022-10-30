@@ -35,6 +35,23 @@ File: DBR.sol
 65:     }
 ```
 
+# [L] `Pay` function is not check for availability of token
+In `GovTokenEscrow.sol` and `SimpleERC20Escrow.sol` contracts, the `pay()` function is not checking if the balance of the token inside the contract is enough to transfer based on the `amount` input. (Unlike INVEscrow.sol)
+```
+File: SimpleERC20Escrow.sol
+36:     function pay(address recipient, uint amount) public {
+37:         require(msg.sender == market, "ONLY MARKET");
+38:         token.transfer(recipient, amount);
+39:     }
+
+File: GovTokenEscrow.sol
+43:     function pay(address recipient, uint amount) public {
+44:         require(msg.sender == market, "ONLY MARKET");
+45:         token.transfer(recipient, amount);
+46:     }
+
+```
+ 
 # [NC] Open TODO comment
 
 For production, there should not be any `TODO` left on the code
