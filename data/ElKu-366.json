@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "ElKu",
+  "risk": "2",
+  "title": "User can withdraw his unused collateral when the deficit on his used collateral is non-zero",
+  "issueId": 366,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/366"
+}
