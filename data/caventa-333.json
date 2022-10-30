@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "caventa",
+  "risk": "2",
+  "title": "All the viewPrice function calls should be replaced by getPrice function calls to always get the minimum price for the past 2 days",
+  "issueId": 333,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/333"
+}
