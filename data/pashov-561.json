@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "pashov",
+  "risk": "3",
+  "title": "Using a non-18 decimals token as collateral (for ex. USDT) in a `Market` will result in multiple value losing situations",
+  "issueId": 561,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/561"
+}
