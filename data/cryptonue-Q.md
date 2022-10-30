@@ -26,6 +26,15 @@ File: Market.sol
 401:     }
 ```
 
+# [L] No upper bound for `replenishmentPriceBps` in `DBR.sol` contract
+```
+File: DBR.sol
+62:     function setReplenishmentPriceBps(uint newReplenishmentPriceBps_) public onlyOperator {
+63:         require(newReplenishmentPriceBps_ > 0, "replenishment price must be over 0");
+64:         replenishmentPriceBps = newReplenishmentPriceBps_;
+65:     }
+```
+
 # [NC] Open TODO comment
 
 For production, there should not be any `TODO` left on the code
@@ -55,3 +64,5 @@ File: DBR.sol
 # [NC] Maximum line length is 120 characters
 There are some of code > 120 characters per line in (Market.sol, Oracle.sol)
 
+# [NC] No emit event on `setReplenishmentPriceBps`
+It's best to emit an event if function change some settings
