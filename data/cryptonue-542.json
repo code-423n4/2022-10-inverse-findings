@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "cryptonue",
+  "risk": "2",
+  "title": "Return value of token.transfer() is not checked",
+  "issueId": 542,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/542"
+}
