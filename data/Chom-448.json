@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "Chom",
+  "risk": "2",
+  "title": "Oracle doesn't work with a token that has decimals > 18",
+  "issueId": 448,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/448"
+}
