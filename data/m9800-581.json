@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "m9800",
+  "risk": "3",
+  "title": "Approve front-running attack in DBR.sol",
+  "issueId": 581,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/581"
+}
