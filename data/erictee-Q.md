@@ -109,3 +109,17 @@ src/DBR.sol:L359    function _mint(address to, uint256 amount) internal virtual 
 
 ```
 
+### [N-01] Open TODOs
+
+
+#### Impact
+Code architecture, incentives, and error handling/reporting questions/issues should be resolved before deployment.
+
+
+#### Findings:
+```
+src/escrows/INVEscrow.sol:L35        xINV = _xINV; // TODO: Test whether an immutable variable will persist across proxies
+
+```
+
+
