@@ -27,3 +27,11 @@ both function can be flatten into one function which will safe gas, for example
 ```
 function setContractAllow(address _contract, bool _status) public onlyOperator { contractAllowlist[_contract] = _status; }
 ```
+
+# Use unchecked for increments to safe gass
+```
+File: Market.sol
+520:     function invalidateNonce() public {
+521:         nonces[msg.sender]++;
+522:     }
+```
