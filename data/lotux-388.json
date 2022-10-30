@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "lotux",
+  "risk": "2",
+  "title": "Token transfers do not verify that the tokens were successfully transferred",
+  "issueId": 388,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/388"
+}
