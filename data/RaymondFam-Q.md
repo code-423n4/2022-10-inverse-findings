@@ -208,7 +208,7 @@ Lines in source code are typically limited to 80 characters, but it’s reasonab
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Oracle.sol#L12-L14
 
 ## Minimization of Truncation
-As an example, each respective code line below may be refactored as follows to minimize the frequency of truncation:
+Each of the respective three instances entailed below could have the code line refactored to minimize the frequency of truncation:
 
 https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L360
 
@@ -220,3 +220,28 @@ https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L377
 ```
     uint minimumCollateral = debt * 1 ether * 10000 / (oracle.viewPrice(address(collateral), collateralFactorBps) * collateralFactorBps);
 ```
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L606
+
+```
+    uint liquidationFee = repaidDebt * 1 ether * liquidationFeeBps / (price * 10000);
+```
+Note: Comment the above operations on converting their double/multiple divisions into just one division where deemed fit.
+
+## Non-Assembly Method Alternative
+Automated tools would typically flag a contract using inline-assembly as having high complexity, poor readability and error prone as far as security is concerned. As such, avoid using it where possible. For instance,  there is a newer syntax way to invoke create2 without assembly. You would just need to pass salt and the contract constructor arguments as opposed to the following instance:
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L234
+
+```
+    address instance = address(new <ContractName>{salt: user}(<constructor argument(s)>));
+```
+
+Please visit the following link for further details:
+
+https://solidity-by-example.org/app/create2/
+https://docs.soliditylang.org/en/latest/control-structures.html#salted-contract-creations-create2
+
+## Parameterized Instead of Hard Coding
+It is a good practice to parameterize the immutable contract instance, `dola`, at the constructor instead of getting it directly assigned in the state variable declaration, just it has been done to `collateral`. 
+
+https://github.com/code-423n4/2022-10-inverse/blob/main/src/Market.sol#L44   
