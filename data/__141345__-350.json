@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "__141345__",
+  "risk": "2",
+  "title": "Price feed from `latestAnswer()` could be stale",
+  "issueId": 350,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/350"
+}
