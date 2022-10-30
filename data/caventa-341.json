@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "caventa",
+  "risk": "2",
+  "title": "NormalizedPrice will be wrong if the oracle's feed decimal is more than 18.",
+  "issueId": 341,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/341"
+}
