@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "dipp",
+  "risk": "2",
+  "title": "```latestAnswer``` form Chainlink feed not checked for stale/incorrect data",
+  "issueId": 481,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/481"
+}
