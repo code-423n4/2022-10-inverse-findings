@@ -1,0 +1,8 @@
+{
+  "contest": 175,
+  "handle": "pedroais",
+  "risk": "2",
+  "title": "Centralization risk, single operator private key can be used to hurt user's funds",
+  "issueId": 511,
+  "issueUrl": "https://github.com/code-423n4/2022-10-inverse-findings/issues/511"
+}
