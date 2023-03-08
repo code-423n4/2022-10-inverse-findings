@@ -1,3 +1,11 @@
+---
+sponsor: "Inverse Finance"
+slug: "2022-10-inverse"
+date: "2022-12-20"
+title: "Inverse Finance contest"
+findings: "https://github.com/code-423n4/2022-10-inverse-findings/issues"
+contest: 175
+---
 
 # Overview
 
